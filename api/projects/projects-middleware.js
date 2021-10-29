@@ -24,7 +24,7 @@ async function validateProjectId(req, res, next) {
 const projectSchema = yup.object({
     name: yup.string().trim().required(),
     description: yup.string().trim().required(),
-    completed: yup.bool().required(),
+    completed: yup.bool().required(), //had to make it required to fix bug
 })
 
 async function validateProject(req, res, next) {
